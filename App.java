@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import products.Candy;
+import products.Car;
+import products.Oakmilk;
+import products.Pipe;
 
 public class App {
     public static boolean run = true;
