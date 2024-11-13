@@ -1,4 +1,4 @@
-package products;
+package products.oakmilk;
 
 public class Oakmilk {
    

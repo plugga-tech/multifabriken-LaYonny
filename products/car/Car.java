@@ -1,4 +1,4 @@
-package products;
+package products.car;
 
 public class Car {
     
