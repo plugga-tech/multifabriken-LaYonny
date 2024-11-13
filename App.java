@@ -9,7 +9,9 @@ public class App {
  
 
     public static void main(String[] args) {
+        Candy candy = new Candy(null, 0);
         Oakmilk oakmilk = new Oakmilk(0, 0);
+
         
         Scanner scan = new Scanner(System.in);
     
@@ -27,6 +29,8 @@ public class App {
                         break;
                         case 2:
                         System.out.println("2 Godis");
+
+                        candy.addCandyContent("", 0);
                         break;
                         case 3:
                         System.out.println("3 Rör");
@@ -36,14 +40,15 @@ public class App {
 
                         //Oakmilk oakmilk = new Oakmilk(0, 0);
                         //Basic kod, ska ändras
-                        oakmilk.addFatContent(0, 0);
+
+                        oakmilk.addOakMilkContent(0, 0);
 
                         break;
                         case 5:
                         System.out.println("Lista med alla beställda produkter");
                         break;
                         case 6:
-                        System.out.println("Avsluta programmet");
+                        System.out.println("Programmet avslutas!");
                         run = false;
                         scan.close();
                         break;
