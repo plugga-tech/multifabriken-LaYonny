@@ -1,8 +1,8 @@
 import java.util.Scanner;
-import products.Candy;
-import products.Car;
-import products.Oakmilk;
-import products.Pipe;
+import products.candy.Candy;
+import products.car.Car;
+import products.oakmilk.Oakmilk;
+import products.pipe.Pipe;
 
 public class App {
     public static boolean run = true;
