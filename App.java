@@ -9,6 +9,7 @@ public class App {
  
 
     public static void main(String[] args) {
+        Oakmilk oakmilk = new Oakmilk(0, 0);
         
         Scanner scan = new Scanner(System.in);
     
@@ -22,16 +23,21 @@ public class App {
         
                 switch (meny) {
                     case 1:
-                        System.out.println("Bilar");
+                        System.out.println("1 Bilar");
                         break;
                         case 2:
-                        System.out.println("Godis");
+                        System.out.println("2 Godis");
                         break;
                         case 3:
-                        System.out.println("Rör");
+                        System.out.println("3 Rör");
                         break;
                         case 4:
-                        System.out.println("Havremjölk");
+                        System.out.println("4 Havremjölk");
+
+                        //Oakmilk oakmilk = new Oakmilk(0, 0);
+                        //Basic kod, ska ändras
+                        oakmilk.addFatContent(0, 0);
+
                         break;
                         case 5:
                         System.out.println("Lista med alla beställda produkter");
