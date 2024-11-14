@@ -6,11 +6,13 @@ public class Car {
     private int carRegistrationNbr;
     private String color;
     private String carBrand;
+    private int id;
 
-    public Car(int carRegistrationNbr, String color, String carBrand){
+    public Car(int carRegistrationNbr, String color, String carBrand, int id){
         this.carRegistrationNbr = carRegistrationNbr;
         this.color = color;
         this.carBrand = carBrand;
+        this.id = id;
 
     }
 
@@ -38,6 +40,11 @@ public class Car {
         this.carBrand = carBrand;
     }
 
-    
-    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }  
 }

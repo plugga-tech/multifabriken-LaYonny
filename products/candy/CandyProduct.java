@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class CandyProduct extends Candy{
     Scanner scan = new Scanner(System.in);
 
-    public CandyProduct(String taste, int numberOfCandy){
+    public CandyProduct(String taste, int numberOfCandy,int id){
 
-        super(taste,numberOfCandy);
+        super(taste,numberOfCandy,id);
     }
     //Basic code to test
     public void addCandyContent(String taste, int numberOfCandy){

@@ -6,8 +6,8 @@ public class PipeProduct extends Pipe{
     Scanner scan = new  Scanner(System.in);
 
 
-    public PipeProduct(double diameter, double length){
-        super(diameter, length);
+    public PipeProduct(double diameter, double length, int id){
+        super(diameter, length, id);
     }
 
     public void addPipeContent(double diameter, double length){
