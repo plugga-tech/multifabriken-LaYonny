@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 import products.candy.CandyProduct;
 import products.car.CarProduct;
+import products.pipe.PipeProduct;
 import products.oakmilk.OakmilkProduct;
-import products.pipe.Pipe;
+
 
 public class App {
     public static boolean run = true;
@@ -13,6 +14,7 @@ public class App {
 
         CarProduct car = new CarProduct(0, null, null);
         CandyProduct candy = new CandyProduct(null, 0);
+        PipeProduct pipe = new PipeProduct(0, 0);
         OakmilkProduct oakmilk = new OakmilkProduct(0, 0);
 
         
@@ -22,11 +24,12 @@ public class App {
 
         //menyval 1-6
         System.out.println("Välj mellan 1-6");   
+        System.out.println("1:Bilar. 2:Godis. 3:Rör. 4:Havremjölk. 5:Beställningslista. 6:Avsluta programmet.");
 
             if (scan.hasNextInt()) {
                 int meny = scan.nextInt();
         
-                switch (meny) {
+                switch (meny) {  //Basic kod, ska ändras
                     case 1:
                         System.out.println("1 Bilar");
                         car.addCarContent(meny, null, null);
@@ -39,15 +42,13 @@ public class App {
                         break;
                         case 3:
                         System.out.println("3 Rör");
+                        pipe.addPipeContent(0, 0);
+
                         break;
                         case 4:
                         System.out.println("4 Havremjölk");
 
-                        //Oakmilk oakmilk = new Oakmilk(0, 0);
-                        //Basic kod, ska ändras
-
                         oakmilk.addOakMilkContent(0, 0);
-
                         break;
                         case 5:
                         System.out.println("Lista med alla beställda produkter");
