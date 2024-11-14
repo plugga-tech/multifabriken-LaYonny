@@ -1,7 +1,8 @@
 import java.util.Scanner;
-import products.candy.Candy;
+
+import products.candy.CandyProduct;
 import products.car.Car;
-import products.oakmilk.Oakmilk;
+import products.oakmilk.OakmilkProduct;
 import products.pipe.Pipe;
 
 public class App {
@@ -9,8 +10,8 @@ public class App {
  
 
     public static void main(String[] args) {
-        Candy candy = new Candy(null, 0);
-        Oakmilk oakmilk = new Oakmilk(0, 0);
+        CandyProduct candy = new CandyProduct(null, 0);
+        OakmilkProduct oakmilk = new OakmilkProduct(0, 0);
 
         
         Scanner scan = new Scanner(System.in);

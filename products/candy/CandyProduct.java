@@ -2,10 +2,10 @@ package products.candy;
 
 import java.util.Scanner;
 
-public class Candy extends CandyProduct{
+public class CandyProduct extends Candy{
     Scanner scan = new Scanner(System.in);
 
-    public Candy(String taste, int numberOfCandy){
+    public CandyProduct(String taste, int numberOfCandy){
 
         super(taste,numberOfCandy);
     }

@@ -1,11 +1,11 @@
 package products.oakmilk;
 
-public class OakProduct {
+public class Oakmilk {
     private double  fatContent;
     private double volume;
     
 
-    public OakProduct(double fatContent, double volume){
+    public Oakmilk(double fatContent, double volume){
         this.fatContent = fatContent;
         this.volume = volume;
     }
