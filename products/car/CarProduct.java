@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class CarProduct extends Car{
      Scanner scan = new Scanner(System.in);
 
-    public CarProduct(int carRegistrationNbr,String color, String carBrand){
+    public CarProduct(int carRegistrationNbr,String color, String carBrand,int id){
 
-        super(carRegistrationNbr, color, carBrand);
+        super(carRegistrationNbr, color, carBrand,id);
 
     }
 

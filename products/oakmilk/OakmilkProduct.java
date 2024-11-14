@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class  OakmilkProduct extends Oakmilk {
     Scanner scan = new Scanner(System.in);
 
-    public OakmilkProduct(int fatContent, int vloume){
+    public OakmilkProduct(int fatContent, int vloume,int id){
       
-        super(fatContent,vloume);  
+        super(fatContent,vloume,id);  
 
     }
 
