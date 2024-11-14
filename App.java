@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 import products.candy.CandyProduct;
-import products.car.Car;
+import products.car.CarProduct;
 import products.oakmilk.OakmilkProduct;
 import products.pipe.Pipe;
 
@@ -10,6 +10,8 @@ public class App {
  
 
     public static void main(String[] args) {
+
+        CarProduct car = new CarProduct(0, null, null);
         CandyProduct candy = new CandyProduct(null, 0);
         OakmilkProduct oakmilk = new OakmilkProduct(0, 0);
 
@@ -27,11 +29,13 @@ public class App {
                 switch (meny) {
                     case 1:
                         System.out.println("1 Bilar");
+                        car.addCarContent(meny, null, null);
+                        
                         break;
                         case 2:
                         System.out.println("2 Godis");
 
-                        candy.addCandyContent("", 0);
+                        candy.addCandyContent(null, 0);
                         break;
                         case 3:
                         System.out.println("3 Rör");
