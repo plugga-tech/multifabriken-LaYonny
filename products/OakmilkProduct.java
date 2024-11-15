@@ -1,13 +1,16 @@
-package products.oakmilk;
+package products;
 
 import java.util.Scanner;
 
-public class  OakmilkProduct extends Oakmilk {
+
+
+public class  OakmilkProduct extends Products{
     Scanner scan = new Scanner(System.in);
 
     public OakmilkProduct(int fatContent, int vloume,int id){
       
-        super(fatContent,vloume,id);  
+        super(null, null, null,null, 0, 0, 0,
+        fatContent, vloume, id);
 
     }
 

@@ -1,13 +1,16 @@
-package products.car;
+package products;
 
 import java.util.Scanner;
 
-public class CarProduct extends Car{
+
+
+public class CarProduct extends Products{
      Scanner scan = new Scanner(System.in);
 
-    public CarProduct(int carRegistrationNbr,String color, String carBrand,int id){
+    public CarProduct(String carRegistrationNbr,String color, String carBrand,int id){
 
-        super(carRegistrationNbr, color, carBrand,id);
+       super(carRegistrationNbr, color, carBrand, null, 0, 0, 0,
+       0, 0, id);
 
     }
 
