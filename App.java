@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-import products.candy.CandyProduct;
-import products.car.CarProduct;
-import products.pipe.PipeProduct;
-import products.oakmilk.OakmilkProduct;
+import products.CandyProduct;
+import products.CarProduct;
+import products.OakmilkProduct;
+import products.PipeProduct;
 
 
 public class App {
@@ -12,7 +12,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        CarProduct car = new CarProduct(0, null, null,0);
+        CarProduct car = new CarProduct(null, null, null, 0);
         CandyProduct candy = new CandyProduct(null, 0,0);
         PipeProduct pipe = new PipeProduct(0, 0,0);
         OakmilkProduct oakmilk = new OakmilkProduct(0, 0,0);

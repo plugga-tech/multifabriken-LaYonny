@@ -1,13 +1,14 @@
-package products.candy;
+package products;
 
 import java.util.Scanner;
 
-public class CandyProduct extends Candy{
+public class CandyProduct extends Products{
     Scanner scan = new Scanner(System.in);
 
     public CandyProduct(String taste, int numberOfCandy,int id){
 
-        super(taste,numberOfCandy,id);
+        super(taste, null, null, null, numberOfCandy, 0, 0,
+        0,0, id);
     }
     //Basic code to test
     public void addCandyContent(String taste, int numberOfCandy){
