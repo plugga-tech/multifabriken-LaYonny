@@ -23,8 +23,20 @@ public class PipeProduct extends Products{
 
         System.out.println("Diametern är :" + diameter+"diameter" + " och längden är " + length+ "cm(?)");
 
+    }
 
+    public void addProductContent(){
 
+        System.out.println("välj diameter på röret");
+        double diameter = scan.nextDouble();
+        setDiameter(diameter);
+
+        System.out.println("välj längd på röret");
+        double length = scan.nextDouble();
+        setLength(length);
+
+        System.out.println("Diametern är :" + getDiameter()+"diameter" + " och längden är " + getLength()+ "cm(?)");
+        
     }
     
 }

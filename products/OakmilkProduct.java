@@ -9,7 +9,8 @@ public class  OakmilkProduct extends Products{
 
     public OakmilkProduct(int fatContent, int vloume,int id){
       
-        super(null, null, null,null, 0, 0, 0,
+        super(null, null, null,null,
+        0, 0, 0,
         fatContent, vloume, id);
 
     }
@@ -23,5 +24,19 @@ public class  OakmilkProduct extends Products{
         vloume = scan.nextDouble();
 
         System.out.println("fetthalt är " +fatContent + " " + "Litermängd " +vloume);
+    }
+
+    public void addProductContent(){
+
+        System.out.println("Skriv in fetthalt");
+        double fatContent = scan.nextDouble();
+        setFatContent(fatContent);
+
+        System.out.println("Skriv in Litermängd");
+        double vloume = scan.nextDouble();
+        setVloume(vloume);
+
+        System.out.println("fetthalt är " +getFatContent() + " " + "Litermängd " +getVloume());
+        
     }
 }

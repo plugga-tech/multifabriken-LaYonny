@@ -32,23 +32,23 @@ public class App {
                 switch (meny) {  //Basic kod, ska ändras
                     case 1:
                         System.out.println("1 Bilar");
-                        car.addCarContent(meny, null, null);
+                        car.addProductContent();
                         
                         break;
                         case 2:
                         System.out.println("2 Godis");
 
-                        candy.addCandyContent(null, 0);
+                        candy.addProductContent();
                         break;
                         case 3:
                         System.out.println("3 Rör");
-                        pipe.addPipeContent(0, 0);
+                        pipe.addProductContent();
 
                         break;
                         case 4:
                         System.out.println("4 Havremjölk");
 
-                        oakmilk.addOakMilkContent(0, 0);
+                        oakmilk.addProductContent();
                         break;
                         case 5:
                         System.out.println("Lista med alla beställda produkter");
