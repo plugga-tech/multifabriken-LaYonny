@@ -9,7 +9,8 @@ public class CarProduct extends Products{
 
     public CarProduct(String carRegistrationNbr,String color, String carBrand,int id){
 
-       super(carRegistrationNbr, color, carBrand, null, 0, 0, 0,
+       super(carRegistrationNbr, color, carBrand, null,
+       0, 0, 0,
        0, 0, id);
 
     }
@@ -26,6 +27,24 @@ public class CarProduct extends Products{
         carBrand = scan.next();
 
         System.out.println("Bilens registreringsnummer: " +carRegistrationNbr + " "+ "Bilens färg " + color + "Bilmärke" +carBrand);
+
+    }
+
+    public void addProductContent(){
+        System.out.println("Ange registreringsnummer ");
+        String carRegistrationNbr = scan.next();
+
+        setCarRegistrationNbr(carRegistrationNbr);
+
+        System.out.println("Välj bilfärg");
+        String color = scan.next();
+        setColor(color);
+
+        System.out.println("Bilmärke");
+        String carBrand = scan.next();
+        setCarBrand(carBrand);
+
+        System.out.println("Bilens registreringsnummer:" +getCarRegistrationNbr() + " Bilens färg är " + getColor() + " Bilmärket är " +getCarBrand());
 
     }
     

@@ -1,6 +1,6 @@
 package products;
 
-public class Products {
+public abstract class Products {
     //Car variabels
     private String carRegistrationNbr;
     private String color;
@@ -42,6 +42,8 @@ public class Products {
         this.vloume = vloume;
 
     }
+
+    public abstract void addProductContent();
 
     public String getCarRegistrationNbr() {
         return carRegistrationNbr;
