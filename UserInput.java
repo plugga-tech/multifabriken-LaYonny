@@ -28,7 +28,7 @@ public class UserInput {
             if (scan.hasNextInt()) {
                 int meny = scan.nextInt();
         
-                switch (meny) {  //Basic kod, ska ändras
+                switch (meny) {  
                     case 1:
                         System.out.println("1 Bilar");
                         car.addProductContent();
@@ -54,17 +54,13 @@ public class UserInput {
                         System.out.println();
 
                             car.addToList();
-                            System.out.println();
-
+                       
                             candy.addToList();
 
                             oakmilk.addToList();
-                            System.out.println();
-
+                        
                             pipe.addToList();
-                            System.out.println();
-  
-
+                            
                         break;
                         case 6:
                         System.out.println("Programmet avslutas!");
@@ -78,7 +74,7 @@ public class UserInput {
                 }
             }
             else{
-                System.out.println("Felmeddelande för felinput (bokstäver etc)");
+                System.out.println("Felmeddelande för felinput, endast siffror!");
                 scan.next();
             }
         } while (run);
