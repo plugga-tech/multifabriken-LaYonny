@@ -7,18 +7,19 @@ import java.util.Scanner;
 public class CarProduct extends Products{
      Scanner scan = new Scanner(System.in);
    
-
+    //The variabels car uses from Sup
     public CarProduct(String carRegistrationNbr,String color, String carBrand){
 
-       super(carRegistrationNbr, color, carBrand, null,
+       super(carRegistrationNbr, color, carBrand, null, //Calls in Sup
        0, 0, 0,
        0, 0);
 
     }
 
+    @Override //Override inherited method
     public void addProductContent(){
         
-        System.out.println("Ange registreringsnummer ");
+        System.out.println("Ange registreringsnummer ");//Ask for three diffrent user input, saves to variables. Calls in setters
         String carRegistrationNbr = scan.next();
 
         setCarRegistrationNbr(carRegistrationNbr);
@@ -31,9 +32,9 @@ public class CarProduct extends Products{
         String carBrand = scan.next();
         setCarBrand(carBrand);
 
-        int i = productList.size();
+        int i = productList.size(); //gives i the size of the list
 
-        productList.add(new CarProduct(getCarRegistrationNbr(), getColor(), getCarBrand()));
+        productList.add(new CarProduct(getCarRegistrationNbr(), getColor(), getCarBrand())); // 
 
         //Test code
         System.out.println(getCarRegistrationNbr() + " " + getColor() + " " + getCarBrand());
@@ -42,31 +43,28 @@ public class CarProduct extends Products{
     }
     public String toString(){
 
+        //create output text for the object when list is called with toString
         return"Registreringsnummer: " +getCarRegistrationNbr()+ " " + "Bilfärg: " + getColor()+ " " + "Bilmärke: " + getCarBrand();
     }
 
+    @Override //Override inherited method for list
     public void addToList(){   
-        for(int i =0; i < productList.size();i++){
+        for(int i =0; i < productList.size();i++){ //loops all objects from Car class (only from car class)
             
-            if (i == 0) {//Testar en grej =)
+            if (i == 0) {
                 
                 System.out.println("Bil");
                 System.out.println(productList.get(i).toString());
-                System.out.println("första på listan \n");
-            }
-            else if (i == productList.size()-1){
-                System.out.println("\nSista på listan godis");
-                System.out.println(productList.get(i).toString());
-                System.out.println("Sista på listan godis");
+                
             }
             else
             {
-                System.out.println("allt mellan 0 och -1");
+                  
                 System.out.println(productList.get(i).toString());
-                System.out.println("allt mellan 0 och -1 ");
-            }
-            
+ 
+            }         
         }
+      System.out.println();  
 
     }
     

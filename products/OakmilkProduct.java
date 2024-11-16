@@ -14,11 +14,9 @@ public class  OakmilkProduct extends Products{
         fatContent, vloume);
 
     }
-
+    @Override
     public void addProductContent(){
-        boolean run = true;
-
-        do {
+ 
             boolean input1 = true;
             boolean input2 = true;
 
@@ -59,10 +57,7 @@ public class  OakmilkProduct extends Products{
     
             //Test code
             System.out.println(getFatContent()+ " " + getVloume());
-            System.out.println(productList.get(i).toString());
-            run = false;
-        } while (run);
-        
+            System.out.println(productList.get(i).toString());       
     }
 
 
@@ -70,28 +65,22 @@ public class  OakmilkProduct extends Products{
 
         return"Fetthalt:" +getFatContent()+ ":%" + " " + "Litermängd  " + getVloume() +":L";
     }
-
+    @Override
     public void addToList(){   
         for(int i =0; i < productList.size();i++){
             
           
-            if (i == 0) {//Testar en grej =)
+            if (i == 0) {
                 
                 System.out.println("Havremjölk");
                 System.out.println(productList.get(i).toString());
-                System.out.println("första på listan \n");
-            }
-            else if (i == productList.size()-1){
-                System.out.println("\nSista på listan godis");
-                System.out.println(productList.get(i).toString());
-                System.out.println("Sista på listan godis");
+   
             }
             else
             {
-                System.out.println("allt mellan 0 och -1");
-                System.out.println(productList.get(i).toString());
-                System.out.println("allt mellan 0 och -1 ");
+                System.out.println(productList.get(i).toString());       
             }      
         }
+
     }     
 }

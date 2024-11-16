@@ -46,17 +46,19 @@ public abstract class Products {
 
     }
 
+    // two abstract methods one adds all product infon second adds all created objects to a list
     public abstract void addProductContent();
 
     public abstract void addToList();
 
     
 
-
+    //Makes one arraylist all child classes can use
     public List<Products> productList = new ArrayList<>();
 
 
 
+    //All getters and setters for all child classes
 
     public String getCarRegistrationNbr() {
         return carRegistrationNbr;
