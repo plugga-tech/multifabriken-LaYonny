@@ -59,7 +59,6 @@ public class App {
                             System.out.println();
 
                             candy.addToList();
-                            System.out.println();
 
                             oakmilk.addToList();
                             System.out.println();

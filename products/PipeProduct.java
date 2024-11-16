@@ -36,13 +36,30 @@ public class PipeProduct extends Products{
 
     public String toString(){
 
-        return"Diametern är :" + getDiameter()+"diameter" + " och längden är " + getLength()+ ":cm";
+        return"Diametern :" + getDiameter() + " " + " och längden är " + getLength()+ ":cm";
     }
     
     public void addToList(){   
         for(int i =0; i < productList.size();i++){
             
-            System.out.println(productList.get(i).toString());
+            
+            if (i == 0) {//Testar en grej =)
+                
+                System.out.println("Rör");
+                System.out.println(productList.get(i).toString());
+                System.out.println("första på listan \n");
+            }
+            else if (i == productList.size()-1){
+                System.out.println("\nSista på listan godis");
+                System.out.println(productList.get(i).toString());
+                System.out.println("Sista på listan godis");
+            }
+            else
+            {
+                System.out.println("allt mellan 0 och -1");
+                System.out.println(productList.get(i).toString());
+                System.out.println("allt mellan 0 och -1 ");
+            }
             
         }
     }
