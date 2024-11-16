@@ -14,15 +14,42 @@ public class PipeProduct extends Products{
     }
 
     public void addProductContent(){
+        boolean run = true;
 
-        System.out.println("välj diameter på röret");
-        double diameter = scan.nextDouble();
-        setDiameter(diameter);
+        do {
+            boolean input1 = true;
+            boolean input2 = true;
 
-        System.out.println("välj längd på röret");
-        double length = scan.nextDouble();
-        setLength(length);
+            while (input1) {
 
+                System.out.println("välj diameter på röret ");
+                if (!scan.hasNextDouble()) {
+                    System.out.println("Fel input! Endast siffror, försök igen.");
+                    scan.nextLine();
+                }
+                else{
+                    double diameter = scan.nextDouble();
+                    setDiameter(diameter);
+                    scan.nextLine();
+                    input1 = false;
+                }
+                
+            }
+
+            while (input2) {
+                System.out.println("välj längd i dm ");
+                if (!scan.hasNextDouble()) {
+                    System.out.println("Fel input! Endast siffror, försök igen.");
+                    scan.nextLine();
+                }
+                else{
+                    double length = scan.nextDouble();
+                    setLength(length);
+                    scan.nextLine();
+                    input2 = false;
+                }
+                
+            }
 
         int i = productList.size();
 
@@ -31,12 +58,15 @@ public class PipeProduct extends Products{
         //Test code
         System.out.println(getDiameter()+ " " + getLength());
         System.out.println(productList.get(i).toString());
+        run = false;
+
+        } while (run);
    
     }
 
     public String toString(){
 
-        return"Diametern :" + getDiameter() + " " + " och längden är " + getLength()+ ":cm";
+        return"Diametern :" + getDiameter() + " " + " och längden är " + getLength()+ ":dm";
     }
     
     public void addToList(){   
