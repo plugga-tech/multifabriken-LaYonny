@@ -1,40 +1,53 @@
 package products;
 
+
 import java.util.Scanner;
 
 public class CandyProduct extends Products{
     Scanner scan = new Scanner(System.in);
 
-    public CandyProduct(String taste, int numberOfCandy,int id){
+    public CandyProduct(String taste, int numberOfCandy){
 
-        super(taste, null, null, null,
+        super(null, null, null, taste,
         numberOfCandy, 0, 0,
-        0,0, id);
+        0,0);
     }
-    //Basic code to test
-    public void addCandyContent(String taste, int numberOfCandy){
-        
-        System.out.println("Välj smak på godiset");
-        taste = scan.nextLine();
 
-        System.out.println("Antal " + numberOfCandy);
-        numberOfCandy = scan.nextInt();
-        scan.nextLine();
-
-        System.out.println("Smaken är " +taste + " "+ "Antal godisar: " + numberOfCandy);
-
-    }
     public void addProductContent(){
         System.out.println("Välj smak på godiset");
-        String test = scan.nextLine();
-        setTaste(test);
+        String taste = scan.nextLine();
+        setTaste(taste);
 
         System.out.println("Antal ");
-        int test2 = scan.nextInt();
+        int nbrOfCandy = scan.nextInt();
         scan.nextLine();
-        setNumberOfCandy(test2);
+        setNumberOfCandy(nbrOfCandy);
 
+        int i = productList.size();
+
+        productList.add(new CandyProduct(getTaste(), getNumberOfCandy()));
+
+
+        //Test code
+        System.out.println(getTaste() + " " + getNumberOfCandy());
         System.out.println(getTaste() + " " +getNumberOfCandy());
+        System.out.println(productList.get(i).toString());
+
+    }
+
+    public String toString(){
+
+        return"Smak: " +getTaste()+ " " + "Antal: " + getNumberOfCandy();
+    }
+
+    public void addToList(){
+
+       
+        for(int i =0; i < productList.size();i++){
+            
+            System.out.println(productList.get(i).toString());
+            
+        }
 
     }
 }

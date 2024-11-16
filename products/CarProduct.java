@@ -7,26 +7,11 @@ import java.util.Scanner;
 public class CarProduct extends Products{
      Scanner scan = new Scanner(System.in);
 
-    public CarProduct(String carRegistrationNbr,String color, String carBrand,int id){
+    public CarProduct(String carRegistrationNbr,String color, String carBrand){
 
        super(carRegistrationNbr, color, carBrand, null,
        0, 0, 0,
-       0, 0, id);
-
-    }
-
-    public void addCarContent(int carRegistrationNbr,String color, String carBrand){
-
-        System.out.println("Ange registreringsnummer ");
-        carRegistrationNbr = scan.nextInt();
-
-        System.out.println("Välj bilfärg");
-        color = scan.next();
-
-        System.out.println("Bilmärke");
-        carBrand = scan.next();
-
-        System.out.println("Bilens registreringsnummer: " +carRegistrationNbr + " "+ "Bilens färg " + color + "Bilmärke" +carBrand);
+       0, 0);
 
     }
 
@@ -44,7 +29,26 @@ public class CarProduct extends Products{
         String carBrand = scan.next();
         setCarBrand(carBrand);
 
-        System.out.println("Bilens registreringsnummer:" +getCarRegistrationNbr() + " Bilens färg är " + getColor() + " Bilmärket är " +getCarBrand());
+        int i = productList.size();
+
+        productList.add(new CarProduct(getCarRegistrationNbr(), getColor(), getCarBrand()));
+
+        //Test code
+        System.out.println(getCarRegistrationNbr() + " " + getColor() + " " + getCarBrand());
+        System.out.println(productList.get(i).toString());
+
+    }
+    public String toString(){
+
+        return"registreringsnummer: " +getCarRegistrationNbr()+ " " + "färg på bilen: " + getColor()+ " " + "bilmärket: " + getCarBrand();
+    }
+
+    public void addToList(){   
+        for(int i =0; i < productList.size();i++){
+            
+            System.out.println(productList.get(i).toString());
+            
+        }
 
     }
     

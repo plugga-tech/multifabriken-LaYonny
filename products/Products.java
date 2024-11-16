@@ -1,5 +1,8 @@
 package products;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Products {
     //Car variabels
     private String carRegistrationNbr;
@@ -19,9 +22,9 @@ public abstract class Products {
     private double fatContent;
     private double vloume;
 
-    private int id;
+  
     
-    public Products(String carRegistrationNbr,String color, String carBrand, String taste, int numberOfCandy, double diameter, double length,double fatContent, double vloume, int id){
+    public Products(String carRegistrationNbr,String color, String carBrand, String taste, int numberOfCandy, double diameter, double length,double fatContent, double vloume){
 
         //Car
         this.carRegistrationNbr = carRegistrationNbr;
@@ -31,7 +34,7 @@ public abstract class Products {
         //Candy
         this.taste = taste;
         this.numberOfCandy = numberOfCandy;
-        this.id = id;
+       
 
         //Pipe
         this.diameter = diameter;
@@ -44,6 +47,16 @@ public abstract class Products {
     }
 
     public abstract void addProductContent();
+
+    public abstract void addToList();
+
+    
+
+
+    public List<Products> productList = new ArrayList<>();
+
+
+
 
     public String getCarRegistrationNbr() {
         return carRegistrationNbr;
@@ -115,16 +128,6 @@ public abstract class Products {
 
     public void setVloume(double vloume) {
         this.vloume = vloume;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }  
-
-    
     
 }
