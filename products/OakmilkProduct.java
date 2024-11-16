@@ -16,24 +16,52 @@ public class  OakmilkProduct extends Products{
     }
 
     public void addProductContent(){
+        boolean run = true;
 
-        System.out.println("Skriv in fetthalt i %");
-        double fatContent = scan.nextDouble();
-  
-        setFatContent(fatContent);
+        do {
+            boolean input1 = true;
+            boolean input2 = true;
 
-        System.out.println("Skriv in Litermängd");
-        double vloume = scan.nextDouble();
- 
-        setVloume(vloume);
+            while (input1) {
+                System.out.println("Skriv in fetthalt i % med siffror");
 
-        int i = productList.size();
+                if (!scan.hasNextDouble()) {
+                    System.out.println("Fel input! Endast siffror, försök igen.");
+                    scan.nextLine();
+                }
+                else{
+                    double fatContent = scan.nextDouble();
+                    setFatContent(fatContent);
+                    scan.nextLine();
+                    input1 = false;
+                }            
+            }
+            while (input2) {
+                System.out.println("Skriv in Litermängd");
 
-        productList.add(new OakmilkProduct(getFatContent(), getVloume()));
+                if (!scan.hasNextDouble()) {
+                    System.out.println("Fel input! Endast siffror, försök igen.");
+                    scan.nextLine();
+                              
+                }
+                else{
+                    double vloume = scan.nextDouble();
+                    setVloume(vloume);
+                    scan.nextLine();
+                    input2 = false;
+                }
 
-        //Test code
-        System.out.println(getFatContent()+ " " + getVloume());
-        System.out.println(productList.get(i).toString());
+                
+            }
+            int i = productList.size();
+
+            productList.add(new OakmilkProduct(getFatContent(), getVloume()));
+    
+            //Test code
+            System.out.println(getFatContent()+ " " + getVloume());
+            System.out.println(productList.get(i).toString());
+            run = false;
+        } while (run);
         
     }
 

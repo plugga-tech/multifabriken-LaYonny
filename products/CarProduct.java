@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class CarProduct extends Products{
      Scanner scan = new Scanner(System.in);
+   
 
     public CarProduct(String carRegistrationNbr,String color, String carBrand){
 
@@ -16,6 +17,7 @@ public class CarProduct extends Products{
     }
 
     public void addProductContent(){
+        
         System.out.println("Ange registreringsnummer ");
         String carRegistrationNbr = scan.next();
 
