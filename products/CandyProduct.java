@@ -17,9 +17,8 @@ public class CandyProduct extends Products{
 
     }
 
-    public void addProductContent(){
-        
-        do {
+    @Override
+    public void addProductContent(){  
             boolean input = true;
 
             System.out.println("Välj smak på godiset");
@@ -27,7 +26,7 @@ public class CandyProduct extends Products{
             setTaste(taste);
 
 
-            while (input) {
+            while (input) {//Check if int has numbers, gives error if not true and saves input to set if true
                 System.out.println("Antal ");
                 if (!scan.hasNextInt()) {
 
@@ -51,9 +50,6 @@ public class CandyProduct extends Products{
         System.out.println(getTaste() + " " + getNumberOfCandy());
         System.out.println(getTaste() + " " +getNumberOfCandy());
         System.out.println(productList.get(i).toString());
-        run = false;
-            
-        } while (run);
 
     }
 
@@ -62,7 +58,7 @@ public class CandyProduct extends Products{
         return"Smak: " +getTaste()+ " " + "Antal: " + getNumberOfCandy();
     }
 
-
+    @Override
     public void addToList(){
 
        
@@ -72,20 +68,19 @@ public class CandyProduct extends Products{
                 
                 System.out.println("Godis");
                 System.out.println(productList.get(i).toString());
-                System.out.println("första på listan \n");
+      
             }
             else if (i == productList.size()-1){
-                System.out.println("\nSista på listan godis");
+               
                 System.out.println(productList.get(i).toString());
-                System.out.println("Sista på listan godis");
             }
             else
             {
-                System.out.println("allt mellan 0 och -1");
                 System.out.println(productList.get(i).toString());
-                System.out.println("allt mellan 0 och -1 ");
+            
             }
         }
+        System.out.println();
 
     }
 }

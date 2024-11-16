@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+//imports all child products from product folder
 import products.CandyProduct;
 import products.CarProduct;
 import products.OakmilkProduct;
@@ -10,7 +12,7 @@ public class UserInput {
     public static boolean run = true;
 
     public UserInput(){
-
+        //Create objects
         CarProduct car = new CarProduct("", "", "");
         CandyProduct candy = new CandyProduct("", 0);
         PipeProduct pipe = new PipeProduct(0, 0);
@@ -28,7 +30,7 @@ public class UserInput {
             if (scan.hasNextInt()) {
                 int meny = scan.nextInt();
         
-                switch (meny) {  
+                switch (meny) {  // switch with menyval, call methods from child product classes and list(s)
                     case 1:
                         System.out.println("1 Bilar");
                         car.addProductContent();
@@ -51,23 +53,24 @@ public class UserInput {
                         break;
                         case 5:
                         System.out.println("Lista med alla beställda produkter");
-                        System.out.println();
 
                             car.addToList();
-                       
+                            
                             candy.addToList();
 
-                            oakmilk.addToList();
-                        
                             pipe.addToList();
+
+                            oakmilk.addToList();
                             
                         break;
                         case 6:
-                        System.out.println("Programmet avslutas!");
+                        System.out.println("Programmet avslutas!");//Exit program (gives run value false)
                         run = false;
                         scan.close();
                         break;
                 
+
+                        // two diffrent error outputs, if number smaller or larger then 1-6 and if numbers not used for menyval
                     default:
                     System.out.println("Felmeddelande, siffror stämmer ej med 1-6)");
                         break;
