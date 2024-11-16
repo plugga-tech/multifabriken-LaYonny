@@ -8,21 +8,9 @@ public class PipeProduct extends Products{
     Scanner scan = new  Scanner(System.in);
 
 
-    public PipeProduct(double diameter, double length, int id){
+    public PipeProduct(double diameter, double length){
         super(null, null, null, null,0,
-        diameter, length, 0, 0, id);
-    }
-
-    public void addPipeContent(double diameter, double length){
-
-        System.out.println("välj diameter på röret");
-        diameter = scan.nextDouble();
-
-        System.out.println("välj längd på röret");
-        length = scan.nextDouble();
-
-        System.out.println("Diametern är :" + diameter+"diameter" + " och längden är " + length+ "cm(?)");
-
+        diameter, length, 0, 0);
     }
 
     public void addProductContent(){
@@ -35,8 +23,27 @@ public class PipeProduct extends Products{
         double length = scan.nextDouble();
         setLength(length);
 
-        System.out.println("Diametern är :" + getDiameter()+"diameter" + " och längden är " + getLength()+ "cm(?)");
-        
+
+        int i = productList.size();
+
+        productList.add(new PipeProduct(getDiameter(), getLength()));
+
+        //Test code
+        System.out.println(getDiameter()+ " " + getLength());
+        System.out.println(productList.get(i).toString());
+   
+    }
+
+    public String toString(){
+
+        return"Diametern är :" + getDiameter()+"diameter" + " och längden är " + getLength()+ ":cm";
     }
     
+    public void addToList(){   
+        for(int i =0; i < productList.size();i++){
+            
+            System.out.println(productList.get(i).toString());
+            
+        }
+    }
 }

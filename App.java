@@ -6,16 +6,17 @@ import products.OakmilkProduct;
 import products.PipeProduct;
 
 
+
 public class App {
     public static boolean run = true;
  
 
     public static void main(String[] args) {
 
-        CarProduct car = new CarProduct(null, null, null, 0);
-        CandyProduct candy = new CandyProduct(null, 0,0);
-        PipeProduct pipe = new PipeProduct(0, 0,0);
-        OakmilkProduct oakmilk = new OakmilkProduct(0, 0,0);
+        CarProduct car = new CarProduct("", "", "");
+        CandyProduct candy = new CandyProduct("", 0);
+        PipeProduct pipe = new PipeProduct(0, 0);
+        OakmilkProduct oakmilk = new OakmilkProduct(0, 0);
 
         
         Scanner scan = new Scanner(System.in);
@@ -24,7 +25,7 @@ public class App {
 
         //menyval 1-6
         System.out.println("Välj mellan 1-6");   
-        System.out.println("1:Bilar. 2:Godis. 3:Rör. 4:Havremjölk. 5:Beställningslista. 6:Avsluta programmet.");
+        System.out.println("1:Bilar. 2:Godis. 3:Rör. 4:Havremjölk. \n5:Beställningslista. 6:Avsluta programmet.");
 
             if (scan.hasNextInt()) {
                 int meny = scan.nextInt();
@@ -52,6 +53,21 @@ public class App {
                         break;
                         case 5:
                         System.out.println("Lista med alla beställda produkter");
+                        System.out.println();
+
+                            car.addToList();
+                            System.out.println();
+
+                            candy.addToList();
+                            System.out.println();
+
+                            oakmilk.addToList();
+                            System.out.println();
+
+                            pipe.addToList();
+                            System.out.println();
+  
+
                         break;
                         case 6:
                         System.out.println("Programmet avslutas!");

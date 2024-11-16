@@ -7,23 +7,12 @@ import java.util.Scanner;
 public class  OakmilkProduct extends Products{
     Scanner scan = new Scanner(System.in);
 
-    public OakmilkProduct(int fatContent, int vloume,int id){
+    public OakmilkProduct(double fatContent, double vloume){
       
         super(null, null, null,null,
         0, 0, 0,
-        fatContent, vloume, id);
+        fatContent, vloume);
 
-    }
-
-    public void addOakMilkContent(double fatContent, double vloume){
-        
-        System.out.println("Skriv in fetthalt");
-        fatContent = scan.nextDouble();
-
-        System.out.println("Skriv in Litermängd");
-        vloume = scan.nextDouble();
-
-        System.out.println("fetthalt är " +fatContent + " " + "Litermängd " +vloume);
     }
 
     public void addProductContent(){
@@ -36,7 +25,26 @@ public class  OakmilkProduct extends Products{
         double vloume = scan.nextDouble();
         setVloume(vloume);
 
-        System.out.println("fetthalt är " +getFatContent() + " " + "Litermängd " +getVloume());
+        int i = productList.size();
+
+        productList.add(new OakmilkProduct(getFatContent(), getVloume()));
+
+        //Test code
+        System.out.println(getFatContent()+ " " + getVloume());
+        System.out.println(productList.get(i).toString());
         
     }
+
+    public String toString(){
+
+        return"Fetthalt:" +getFatContent()+ ":%" + " " + "Litermängd  " + getVloume() +":L";
+    }
+
+    public void addToList(){   
+        for(int i =0; i < productList.size();i++){
+            
+            System.out.println(productList.get(i).toString());
+            
+        }
+    }     
 }
