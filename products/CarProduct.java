@@ -64,8 +64,6 @@ public class CarProduct extends Products{
  
             }         
         }
-      System.out.println();  // adds space between listed car objects and candy
-
     }
     
 }

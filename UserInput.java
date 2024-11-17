@@ -52,7 +52,7 @@ public class UserInput {
                         oakmilk.addProductContent();
                         break;
                         case 5:
-                        System.out.println("Lista med alla beställda produkter");
+                        System.out.println("Beställnings lista\n");
 
                             car.addToList();
                             

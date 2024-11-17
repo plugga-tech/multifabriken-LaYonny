@@ -70,17 +70,11 @@ public class CandyProduct extends Products{
                 System.out.println(productList.get(i).toString());
       
             }
-            else if (i == productList.size()-1){
-               
-                System.out.println(productList.get(i).toString());
-            }
             else
             {
                 System.out.println(productList.get(i).toString());
             
             }
         }
-        System.out.println();
-
     }
 }

@@ -84,6 +84,5 @@ public class PipeProduct extends Products{
             }
             
         }
-        System.out.println();
     }
 }
