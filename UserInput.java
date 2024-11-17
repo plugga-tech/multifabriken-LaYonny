@@ -18,9 +18,9 @@ public class UserInput {
         PipeProduct pipe = new PipeProduct(0, 0);
         OakmilkProduct oakmilk = new OakmilkProduct(0, 0);
 
-        
         Scanner scan = new Scanner(System.in);
-    
+        System.out.println("Multifabriken AB");
+        System.out.println();
         do {
 
         //menyval 1-6
@@ -52,7 +52,7 @@ public class UserInput {
                         oakmilk.addProductContent();
                         break;
                         case 5:
-                        System.out.println("Beställnings lista\n");
+                        System.out.println("Beställningslista\n");
 
                             car.addToList();
                             

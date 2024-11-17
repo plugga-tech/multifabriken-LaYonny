@@ -21,8 +21,6 @@ public abstract class Products {
 
     private double fatContent;
     private double vloume;
-
-  
     
     public Products(String carRegistrationNbr,String color, String carBrand, String taste, int numberOfCandy, double diameter, double length,double fatContent, double vloume){
 
